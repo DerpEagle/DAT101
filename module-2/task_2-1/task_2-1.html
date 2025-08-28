@@ -8,6 +8,48 @@
 <script>
   /* write your code below this line  🙂 */
 
+  <!-- Part 1: I følge W3Schools kan <script> plasseres både i <head> og nederst i <body>.
+    I <head>: koden lastes inn før selve siden vises.
+      I slutten av <body>: anbefales ofte, fordi HTML-en lastes inn først, og JavaScript ikke blokkerer innlasting av siden
+        Beste praksis er å plassere <script> rett før </body>.  -->
+
+  <!-- Part 2: Kilder: W3Schools og MDN Web Docs.
+    I javaScript finnes det tre hovedmåter å erklære variabler på:
+    1: var - den gamle måten, har funksjons-scope og kan føre til forvirring.
+    2: let - brukes til variabler som kan endres. Har blokkscope.
+    3: const - brukes til variabler som ikke skal endres. Har også blokkscope. -->
+
+    var gammelMåte = "Dette er en variabel erklært med var.";
+    let kanEndres = "Dette er en variabel erklært med let.";
+    const kanIkkeEndres = "Dette er en variabel erklært med const.";
+
+  <!-- Part 3: Her er noen eksempler på forskjellige typer variabler -->
+
+  // Heltall
+  let tall = 42;
+
+  // Flyttall (desimaler)
+  let pi = 3.14;
+
+  // Tekst (string)
+  const melding = "This is not the code you are looking for.";
+
+  // Objekt med variabler
+  let person = {
+    navn: "Luke Skywalker",
+    alder: 19,
+    yrke: "Jedi"
+  };
+
+  <!-- Part 4: Variabel uten å bruke let, const eller var -->
+  valuePI = 3.14; // I nettleseren: SyntaxError: Unexpected token ':'. Dette skjer fordi 'valuePI' ikke er erklært med let, const eller var.
+
+  <!-- Part 5: Modifisere en const. -->
+  const piVerdi = 3.14;
+  piVerdi = 3.14159; // I nettleseren: TypeError: Assignment to constant variable. Dette skjer fordi 'piVerdi' er erklært som const og kan ikke endres.
+  
+
+
 </script>
 </body>
 </html>
