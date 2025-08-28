@@ -12,31 +12,59 @@
     <ol>
       <li>Where should you use constants, and where should you use variables? Can they all be constants?</li>
       <p>
-				[Replace this with you answer]
+				Konstanter brukes når en verdi ikke skal endres, f.eks. pi (3.14) eller navnet på en bruker.
+        Variabler brukes når verdien kan endres underveis, f.eks. poengsum i et spill eller en teller i en løkke.
+        Ikke alle kan være konstanter, fordi noen verdier må endres dynamisk.
 			</p>
       <li>How do parentheses affect the arithmetic outcome of an expression?</li>
       <p>
-				[Replace this with you answer]
+				Parenteser endrer rekkefølgen i regnestykket.
+        Uten parenteser følges normal prioritet: gange og dele før pluss og minus.
+        Med parenteser regnes det ut først.
+        let resultat = (2 + 3) * 4; // resultat blir 20
 			</p>
       <li>How do we limit floating-point numbers to a given number of decimals?</li>
       <p>
-				[Replace this with you answer]
+				Vi kan bruke metoden .toFixed() eller .toPrecision() i JavaScript.
+        let tall =3.14159;
+        console.log(tall.toFixed(2)); // 3.14
 			</p>
       <li>How can we compare two floating-point values to see if they are equal (is 12.199999 the same as 12.2)?</li>
       <p>
-				[Replace this with you answer]
+				Fordi flyttall kan ha avrundingsfeil, sammenligner vi med en toleranse (epsilon).
+        let a = 12.199999;
+        let b = 12.2;
+        let epsilon = 0.0001;
+        
+        console.log(Math.abs(a - b) < epsilon); // true
 			</p>
       <li>What do comparison operators return, and how can we check if they are FALSE or TRUE?</li>
       <p>
-				[Replace this with you answer]
+				Sammenligningsoperatorer (==, ===. !=. <, >, <=, >=) returnerer alltid en boolean verdi: true eller false.
+        Vi kan sjekke resultatet direkte i en if-setning eller direkte i konsollen.
+        console.log(5 > 3); // true
+        console.log(2 === 4); // false
 			</p>
       <li>How does the Math.random() function work, and what can it be used for?</li>
       <p>
-				[Replace this with you answer]
+				Math.random() returnerer et tilfeldig tall mellom 0 (inkludert) og 1 (ekskludert).
+        Det kan brukes til:
+        Lage tilfeldige tall for spill.
+        Generere tilfeldige farger.
+        Velge et tilfeldig element fra en liste.
+
+        let tilfeldig = Math.random() * 10; // tilfeldig tall mellom 0 og 10
 			</p>
       <li>What is modulus (%), and when do we need this operator in mathematical operations?</li>
       <p>
-				[Replace this with you answer]
+				Modulus (%) gir resten etter en divisjon.
+        
+        console.log(10 % 3); // 1 (10 delt på 3 gir 3 med resten 1)
+
+        Bruksområder:
+        Sjekke om et tall er partall eller oddetall ( x % 2 === 0 )
+        Lage sykluser (f.eks. dager i en uke)
+        Begrense verdier innenfor et bestemt område (f.eks. klokkeslett)
 			</p>
     </ol>
 		<script type="module" src="./task_2-2.mjs" defer></script>
