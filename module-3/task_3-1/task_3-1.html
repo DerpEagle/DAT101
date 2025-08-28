@@ -11,12 +11,24 @@
     </div>
     <ol>
       <li>Discuss the behavior of part 1, What happens when the wake-up time is not 7 and what happens when it is exactly 7?</li>
-      <p>[Replace this with you answer]</p>
+      <p>Hvis wakeUpTime ikke er 7 → if-setningen kjører ikke, og utskriften sier at du ikke kan ta bussen.</p>
+      <p>Hvis wakeUpTime er akkurat 7 → if-setningen kjører, og utskriften sier at du kan ta bussen.</p>
+
       <li>Same as question #1. How ever the answer should now be different. Discuss the behavior of part 2, What happens when the wake-up time is not 7 and what happens when it is exactly 7?</li>
-      <p>[Replace this with you answer]</p>
+      <p>Hvis wakeUpTime ikke er 7 → else-delen kjører, og utskriften sier at du må ta bilen.</p>
+      <p>Hvis wakeUpTime er 7 → if-delen kjører, og utskriften sier at du kan ta bussen.</p>
+
       <li>Discuss the behavior of part 3, what happens when wake time is less than 7 or greater than 8?</li>
-      <p>[Replace this with you answer]</p>
+      <p>Hvis wakeUpTime < 7 → else-delen kjører, du må ta bilen.</p>
+      <p>Hvis wakeUpTime = 7 → første if-delen kjører, du kan ta bussen.</p>
+      <p>Hvis wakeUpTime = 8 → else if-delen kjører, du kan ta toget.</p>
+      <p>Hvis wakeUpTime > 8 → else-delen kjører, du må ta bilen.</p>
+
       <li>Discuss the behavior for part 4, what happens if the number is exactly 0, is zero positive or negative?</li>
+      <p>Hvis tallet er > 0 → utskrift sier “Positivt”.</p>
+      <p>Hvis tallet er < 0 → utskrift sier “Negativt”.</p>
+      <p>Hvis tallet er 0 → i første versjon med kun positiv/negativ sjekk regnes 0 som negativ (eller faller i else-delen).</p>
+      <p>I oppdatert versjon med “Positiv / Negativ / Null” → 0 identifiseres riktig som null.</p>
     </ol>
     <script type="module" src="./task_3-1.mjs" defer></script>
   </body>
