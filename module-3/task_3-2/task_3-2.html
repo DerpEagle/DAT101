@@ -10,8 +10,40 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>In part 1, is it possible to solve the problem using a single "for" loop?</li>
+
+      <p>Ja, det er mulig å løse oppgaven med bare én “for”-loop, men det krever at man kombinerer både telling opp og telling ned inne i samme loop.</p>
+        <p>Det kan bli mindre oversiktlig og vanskeligere å lese enn å bruke to separate looper.</p>
+        <p>Derfor anbefales det å bruke to looper for klarhet og struktur.</p>
+
+      <li>In part 2, can we create what is known as an "infinite" loop within the condition of the "while" loop?
+          Describe what would or would not be necessary to achieve this. Provide a thorough explanation of
+          your answer.</li>
+
+      <p>Teoretisk kan man lage en infinite loop med while ved å lage en betingelse som aldri blir oppfylt. 
+        <p>I oppgaven med gjetting vil loopen bare bli uendelig hvis tallet som skal gjettes aldri endres eller aldri kan bli korrekt.</p>
+        <p>I praksis ønsker man ikke en uendelig loop, fordi programmet skal stoppe når riktig tall er gjettet.</p>
+        <p>Så for å få en uendelig loop må man unngå å endre variabelen som sjekkes, men det er ikke nødvendig eller ønsket her.</p>
+
+      <li>Discuss briefly how quickly or slowly a computer might be able to compute this, considering the
+          number of guesses and the time it takes. How does the program behave while it is guessing? Can
+          the program perform other tasks concurrently?</li>
+
+      <p>Hastigheten avhenger av hvor mange mulige tall som skal gjettes og hvor tilfeldig gjettingen skjer.</p>
+        <p>For små tall (1–60) går det veldig raskt, og datamaskinen gjetter nesten umiddelbart.</p>
+        <p>For store tall (1–1 000 000) kan det ta lang tid fordi tilfeldige gjetninger kan kreve mange millioner forsøk.</p>
+        <p>Under gjettingen blokkerer programmet i nettleseren, så det kan ikke gjøre andre oppgaver samtidig.</p> 
+        <p>JavaScript er enkelttrådet, så alt venter på at loopen skal fullføre.</p>
+
+      <li>Explain the relationship between rows and columns in nested "for" loops. Can we, for instance,
+          change the order, considering rows to be innermost or columns to be innermost, or does this not
+          matter?</li>
+
+      <p>I nested loops er den ytre loopen vanligvis rader, og den indre loopen kolonner.</p> 
+        <p>Dette betyr at for hver rad blir alle kolonner kjørt ferdig før neste rad starter.</p> 
+        <p>Man kan bytte om rekkefølgen, men da endrer det hvordan output organiseres – det vil si at man må tenke på hva som skal komme først.</p> 
+        <p>Rekkefølgen påvirker altså strukturen på det som skrives ut.</p>
+
     </ol>
     <script type="module" src="./task_3-2.mjs" defer></script>
   </body>
