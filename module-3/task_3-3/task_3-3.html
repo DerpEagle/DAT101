@@ -10,8 +10,49 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+
+      <li>What is the difference between invoking and creating a function?</li>
+
+      <p>Forskjellen mellom å opprette og å kalle (involke) en funksjon er at når du oppretter den,
+        lager du bare selve koden som forteller hva funksjonen skal gjøre. 
+        Når du kaller funksjonen, kjører du koden som ligger inni den. 
+        Altså: å opprette er å definere, å kalle er å bruke.</p>
+
+            <li>Explain the syntax regarding semicolons and code blocks.</li>
+
+      <p>Et semikolon brukes for å avslutte en kommando i JavaScript, nesten som et punktum i en setning. 
+        Kodeblokker er det som står mellom krøllparentesene { } og viser hvor koden til for eksempel en funksjon, 
+        en if-setning eller en løkke starter og slutter. Semikolon brukes ikke etter selve blokken, 
+        men inne i den hvis man avslutter enkeltlinjer.</p>
+
+            <li>What happens when we try to store values from a function when it doesn't return any?</li>
+
+      <p>Hvis man prøver å lagre verdien fra en funksjon som ikke returnerer noe, får man verdien “undefined”. 
+        Det betyr at funksjonen ble kjørt, men den sendte ikke noe tilbake. 
+        Resultatet er tomt fordi det ikke finnes en “return”-verdi.</p>
+
+            <li>How do we separate parameters from each other when creating a function?</li>
+
+      <p>Parametere skilles med komma når man lager en funksjon. Det betyr at hvis man har flere verdier som funksjonen skal bruke, 
+        skriver man dem slik: (a, b, c). Da vet JavaScript at det er tre forskjellige parametere.</p>
+
+            <li>Explain how parameter names are related during the invocation and creation of a function.</li>
+
+      <p>Når man lager en funksjon, bestemmer man hvilke navn parametrene skal ha. Når man kaller funksjonen, 
+        sender man inn verdier i samme rekkefølge som de står. Verdiene blir da koblet til de tilsvarende parameternavnene. 
+        For eksempel: hvis funksjonen heter “multiply(a, b)”, og man kaller den med “multiply(2, 5)”, så blir a = 2 og b = 5.</p>
+
+            <li>Explain why a parameter is undefined when a function call is missing a parameter.</li>
+
+      <p>n parameter blir “undefined” når man kaller funksjonen uten å sende inn en verdi for den. 
+        JavaScript forventer en verdi, men får ingenting, så den lager en tom plass med verdien “undefined”.</p>
+
+            <li>Explain what happens when we use recursive functions.</li>
+
+      <p>En rekursiv funksjon er en funksjon som kaller seg selv. Den gjentar seg til en bestemt betingelse er oppfylt. 
+        Det skjer ofte i oppgaver som teller ned eller beregner noe steg for steg. Hvis den ikke har en sluttbetingelse, 
+        vil den fortsette for alltid og krasje programmet (evig løkke).</p>
+
     </ol>
     <script type="module" src="./task_3-3.mjs" defer></script>
   </body>
