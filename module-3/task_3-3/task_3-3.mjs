@@ -273,8 +273,8 @@ function testMathExpression() {
 
   for (let line = 1; line <= 200; line++) {
 
-    let leftCount = line;
-    let rightCount = line - 1;
+    let leftCount = line + 1;
+    let rightCount = line;
 
     let leftSum = 0;
     for (let i = 0; i < leftCount; i++) {
