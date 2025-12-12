@@ -10,8 +10,35 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>Why is object-oriented development so important in programming?</li>
+
+      <p>Objektorientert utvikling er viktig fordi det gjør koden mer ryddig, oversiktlig og lettere å jobbe videre med. 
+        Når vi deler programmet inn i objekter som har egne egenskaper og funksjoner, blir det enklere å forstå hva som skjer, 
+        gjenbruke kode og gjøre endringer uten å ødelegge resten av systemet. Det gjør også større prosjekter mer håndterbare, 
+        fordi man kan bygge og teste én del av gangen.</p>
+
+      <li>In Task 1, we create a static object called "AccountType." 
+        Explain what this object is used for and how this type 
+        of object can help us in software development.</li>
+
+      <p>I Task 1 lager vi et statisk objekt som heter AccountType, og dette brukes som en fast «liste» over alle kontotypene systemet støtter. 
+        I stedet for å skrive tekstene manuelt hver gang, eller risikere skrivefeil, kan vi hente verdiene direkte fra objektet. Dette gjør koden både tryggere og mer konsistent.
+        Slike objekter er nyttige i programutvikling fordi de samler viktig informasjon på ett sted. Hvis vi senere må endre navn på en kontotype eller legge til en ny, 
+        gjør vi det bare én gang i objektet, og hele programmet oppdateres automatisk. Det gjør systemet enklere å vedlikeholde og reduserer sjansen for feil.</p>
+
+      <li>Discuss why we use encapsulation in classes. Why do we want to "hide" code within our class?
+        Explain how we can create "private" and "public" members in a constructor function.</li>
+
+      <p>Vi bruker innkapsling for å beskytte dataene i en klasse og kontrollere hvordan de brukes. 
+        Ved å «skjule» kode inni klassen unngår vi at andre deler av programmet endrer verdier direkte og skaper feil. 
+        I stedet må alt gå gjennom metodene vi selv har laget, noe som gjør koden tryggere og mer oversiktlig.
+        I en constructor-funksjon blir public medlemmer lagt på this, slik at de er synlige utenfra. Private medlemmer holder vi inni selve constructoren uten this, 
+        slik at de bare kan nås via metodene klassen tilbyr. Dette gir bedre kontroll, færre feil og renere programstruktur.</p>
+
+      <li>Explain what happens when we use the "new" command in JavaScript.</li>
+      <p>Når vi bruker new i JavaScript, opprettes det et helt nytt objekt basert på funksjonen vi kaller. JavaScript lager da en ny «instans» av klassen, 
+        setter riktig prototype, kjører constructor-funksjonen og fyller objektet med de egenskapene og metodene vi har definert. Resultatet er et eget, 
+        selvstendig objekt som vi kan jobbe videre med uten å påvirke andre objekter.</p>
     </ol>
     <script type="module" src="./task_4-1.mjs" defer></script>
   </body>
