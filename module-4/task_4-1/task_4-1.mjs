@@ -229,32 +229,20 @@ TAaccount.prototype.withdraw = function(aAmount, aType) {
     );
 };
 
-// --- Task 7 test sequence ---
-
-// Start i NOK (fra Part 6) og Sparekonto fra før
 myAccount.setCurrencyType("NOK");
 
-// 1) Deposit 12 USD
 myAccount.deposit(12.0, "USD");
 
-// 2) Withdraw 10 GBP
 myAccount.withdraw(10.0, "GBP");
 
-// 3) Bytt til CAD
 myAccount.setCurrencyType("CAD");
 
-// 4) Bytt til INR
 myAccount.setCurrencyType("INR");
 
-// 5) Ta ut resten av saldoen i en annen valuta enn kontoen (bruk SEK)
 const accVal = CurrencyTypes["INR"].value;
 const txVal = CurrencyTypes["SEK"].value;
 const amountInSEK = Number((myAccount.getBalance() * (txVal / accVal)).toFixed(2));
 
 myAccount.withdraw(amountInSEK, "SEK");
-
-
-
-
 
 printOut(newLine);
