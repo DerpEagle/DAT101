@@ -10,8 +10,102 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>What is an array? A short and concise answer is expected here!</li>
+
+      <p>En array er en datastruktur som lagrer flere verdier i en ordnet liste,
+        der hver verdi har en indeks (posisjon) som starter på 0.</p>
+
+            <li>What does it mean to "hardcode" when we talk about programming? (In English, it's called "hard
+coding", "hard-coding", or "hardcoding").</li>
+
+      <p>Hardkoding betyr å skrive faste verdier direkte inn i koden i stedet for å bruke variabler eller beregne dem dynamisk.</p>
+
+      <p>Eksempel:</p>
+      <p>Hardkodet: <code>for (let i = 0; i &lt; 20; i++)</code></p>
+      <p>Dynamisk: <code>for (let i = 0; i &lt; array.length; i++)</code></p>
+
+      <p>Dette gjør koden mindre fleksibel fordi den ikke tilpasser seg endringer automatisk.</p>
+
+            <li>Explain in plain text what happens in task 3, and how we can traverse (iterate) the array when we
+(humans) don't "know" how long the array is.</li>
+
+      <p>I oppgave 3 deler vi en tekststreng (<code>"Hello there, how are you?"</code>) opp i en array
+        ved hjelp av <code>.split(" ")</code>, som lager en array med hvert ord.</p>
+
+      <p>For å traversere arrayen bruker vi <code>.length</code>-egenskapen som alltid forteller oss
+        hvor mange elementer arrayen inneholder.</p>
+
+      <p>Dermed kan vi skrive <code>i &lt; greetingArray.length</code> i løkken,
+        og den vil fungere uansett hvor lang arrayen er.</p>
+
+            <li>Why is it beneficial to store instances of a class in arrays, as in task 4?</li>
+
+      <p>Det gir oss mulighet til å behandle mange objekter på en strukturert måte.</p>
+
+      <p>Vi kan enkelt legge til, fjerne, sortere og gå gjennom alle objektene med løkker.</p>
+
+      <p>I stedet for å ha separate variabler (<code>bok1</code>, <code>bok2</code>, <code>bok3</code>), kan vi håndtere alle bøkene samlet.</p>
+
+      <p>Vi kan utføre operasjoner på dem dynamisk.</p>
+
+            <li>Try your best to explain the EWeekDays object from task 7. How do we use the "value" attribute, for
+example? In what way do "WeekDay", "Workdays", and "Weekends" differ from each other? If we
+wanted to create a new element "WorkoutDays", which would contain "Monday", "Wednesday", and
+"Thursday", how would it ideally look? (I will choose the best answer to this task and reward it with
+pizza in the cafeteria right after New Year. Remember to mark in your submission if you want to participate in the competition!)</li>
+
+      <p>EWeekDays er et objekt som bruker bitmaskeverdier (heksadesimale tall) for å representere ukedager.
+        Hver dag har en unik verdi som er en potens av 2:</p>
+
+      <p>Mandag = 0x01 (1), Tirsdag = 0x02 (2), Onsdag = 0x04 (4), osv.</p>
+
+      <p>Forskjellen mellom dem:</p>
+
+      <p>WeekDay1-7: Representerer enkeltdager med én unik verdi hver</p>
+      <p>WorkDays: Er summen av alle arbeidsdager (1+2+4+8+16 = 31), som representerer mandag til fredag kombinert</p>
+      <p>Weekends: Er summen av lørdag og søndag (32+64 = 96)</p>
+
+      <p>Ved å bruke bitmasker kan vi kombinere flere dager i én verdi og bruke bitoperasjoner for å sjekke om en spesifikk dag er inkludert.</p>
+
+      <p>WorkoutDays ville sett slik ut:</p>
+      <code>WorkoutDays: { Value: 0x01 + 0x04 + 0x08, name: "Treningsdager" }</code>
+
+      <p>Dette gir verdien 1 + 4 + 8 = 13, som representerer mandag, onsdag og torsdag kombinert.</p>
+
+            <li>In task 8, we will use a "callback" routine when sorting. Explain how such a "callback" routine works.</li>
+
+      <p>En callback-funksjon er en funksjon vi sender som parameter til en annen funksjon (i dette tilfellet <code>.sort()</code>).
+        Sorteringsmetoden kaller vår callback-funksjon gjentatte ganger med to elementer (a og b) som skal sammenlignes.</p>
+
+      <p>Callback-funksjonen returnerer:</p>
+      <p>Et negativt tall hvis <code>a</code> skal komme før <code>b</code></p>
+      <p>Et positivt tall hvis <code>a</code> skal komme etter <code>b</code></p>
+      <p>0 hvis rekkefølgen ikke spiller noen rolle</p>
+
+            <li>What happens in the sorting routines you have created? Try to explain how the array can figure out
+if an element should come before or after another. The best way to answer this is to actually print
+both parameters each time the sorting routine runs.</li>
+
+      <p>Når vi returnerer <code>a - b</code> (stigende):</p>
+      <p>Hvis a=3 og b=7: returnerer -4 (negativt), så 3 kommer før 7</p>
+      <p>Hvis a=9 og b=2: returnerer 7 (positivt), så 9 kommer etter 2</p>
+
+      <p>Når vi returnerer <code>b - a</code> (synkende):</p>
+      <p>Hvis a=3 og b=7: returnerer 4 (positivt), så 3 kommer etter 7</p>
+      <p>Hvis a=9 og b=2: returnerer -7 (negativt), så 9 kommer før 2</p>
+
+      <p>Sorteringsalgoritmen bruker disse sammenligningene til å bytte om på elementer til hele arrayen er sortert.</p>
+
+            <li>In task 10, we will create an array with rows and columns. Explain what the first element of the array contains</li>
+
+      <p>Det første elementet <code>grid[0]</code> inneholder en hel rad - altså en array med 9 kolonner.</p>
+
+      <p>Denne indre arrayen ser slik ut:</p>
+      <code>["Rad:0, Kol:0", "Rad:0, Kol:1", "Rad:0, Kol:2", ..., "Rad:0, Kol:8"]</code>
+
+      <p>Så <code>grid[0]</code> er en array, og <code>grid[0][0]</code> er teksten "Rad:0, Kol:0".</p>
+
+
     </ol>
     <script type="module" src="./task_4-2.mjs" defer></script>
   </body>
