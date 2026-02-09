@@ -97,8 +97,21 @@
   </div>
 </fieldset>
 <ol>
-  <li>[Write the question here, and copy this for more questions]</li>
-  <p>[Write your answer here, and copy this for more answers]</p>
+  <li>In this assignment, we use the DOM. Explain how this library can help us develop interactive web pages.</li>
+
+  <p>DOM står for Document Object Model og er en trestruktur som nettleseren bygger opp fra HTML-koden vår. Den lar oss bruke JavaScript til å hente ut, endre og legge til elementer på nettsiden mens den kjører. For eksempel kan vi endre tekst i en paragraf, lese verdier fra inputfelter eller legge til nye rader i en tabell, alt uten å laste siden på nytt. Det er egentlig det som gjør at nettsiden kan reagere på det brukeren gjør, og det er sånn vi får til interaktivitet.</p>
+
+  <li>What is an event? Simply explain what happens when we add an event listener to an object.</li>
+
+  <p>En event er noe som skjer på nettsiden, for eksempel at brukeren klikker på en knapp, trykker en tast eller endrer verdien i et felt. Når vi legger til en event listener med addEventListener, forteller vi nettleseren at den skal holde øye med et bestemt element og vente på en bestemt type hendelse. Når den hendelsen faktisk skjer, kjøres funksjonen vi har koblet til. Så i stedet for at all koden bare kjører med en gang, kan vi få ting til å skje som en respons på det brukeren gjør.</p>
+
+  <li>Sometimes we need to use an event object to get data from the event. Explain how this event object is structured, don't explain all functions or attributes. Try to explain, for example, how to retrieve data from a keyboard or mouse.</li>
+
+  <p>Når en event skjer, sender nettleseren med et event-objekt til funksjonen vår. Dette objektet inneholder informasjon om hva som skjedde. For tastaturhendelser kan vi bruke event.key for å finne ut hvilken tast som ble trykket, for eksempel "Enter" eller "a". For musehendelser kan vi bruke event.clientX og event.clientY for å finne ut hvor på skjermen musen var da brukeren klikket. Objektet har også en target-egenskap som peker på elementet hendelsen skjedde på, og det er nyttig for å hente ut verdier fra for eksempel inputfelter.</p>
+
+  <li>Explain the main difference between DOM id and DOM name. Can we have identical IDs?</li>
+  
+  <p>En id skal være unik på hele siden, altså kan det bare finnes ett element med en bestemt id. Vi bruker getElementById for å hente ut akkurat det ene elementet. Name derimot kan brukes på flere elementer samtidig, som for eksempel en gruppe med checkboxer eller radioknapper som hører sammen. Vi kan hente alle elementer med samme name ved å bruke getElementsByName, og da får vi en samling vi kan loope gjennom. Så nei, vi skal ikke ha identiske IDer, men vi kan ha identiske name-attributter.</p>
 </ol>
 <script type="module" src="./task_4-3.mjs" defer></script>
 </body>
